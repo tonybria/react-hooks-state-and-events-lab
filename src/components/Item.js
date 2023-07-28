@@ -5,7 +5,9 @@ function Item({ name, category }) {
     <li className="">
       <span>{name}</span>
       <span className="category">{category}</span>
-      <button className="add">Add to Cart</button>
+      <button className="add"> onClick={() => setItem("in-cart")}>
+				{item ? "Remove from Cart" : "Add to Cart"}
+        </button>
     </li>
   );
 }
